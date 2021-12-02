@@ -1,9 +1,9 @@
-function fn(...c) {
-    if(!c.every((a) => Number.isNumber(a))) {
+function sum(...nums) {
+    if(!nums.every((num) => Number.isNumber(num))) {
         throw "All arguments must be numbers";
     }
     
-    return c.reduce((a,b) => a + b);
+    return nums.reduce((sum, num) => sum + num);
 }
 
-fn(1,2,3)
+sum(1,2,3)
