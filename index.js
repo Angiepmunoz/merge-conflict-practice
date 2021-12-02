@@ -1,8 +1,10 @@
-function fn(...c) {
-    if(!c.every((a) => Number.isNumber(a)))
+function addAllNumbers(...nums) {
+    if(!nums.every((num) => typeof num === "number")){
         throw "All arguments must be numbers";
-    
-    return c.reduce((a,b) => a + b);
+    }
+
+
+    return nums.reduce((a,b) => a + b);
 }
 
-fn(1,2,3)
+console.log(addAllNumbers(1,2,3))
