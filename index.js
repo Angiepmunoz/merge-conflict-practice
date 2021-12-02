@@ -1,10 +1,11 @@
-function addAllNumbers(...nums) {
-    if(!nums.every((num) => typeof num === "number")){
+
+// TODO have error pop up with NaN as well as other types of non-numbers
+function addAllNumber(...nums) {
+    if(!nums.every((num) => typeof num === "number")) {
         throw "All arguments must be numbers";
     }
-
-
-    return nums.reduce((a,b) => a + b);
+    
+    return nums.reduce((sum, num) => sum + num);
 }
 
-console.log(addAllNumbers(1,2,3))
+addAllNumber(1,2,3)
